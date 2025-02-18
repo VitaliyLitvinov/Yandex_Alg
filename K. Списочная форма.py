@@ -19,8 +19,6 @@ def solution():
             else: result.append(str(sum_num)); var = 0
         p2 -=  1
     if var == 1: result.append(str(1))
-#     sys.stdin.write(''.join(result[::-1]))
-    print(''.join(result[::-1]))
-
+    sys.stdout.write(''.join(result[::-1]))
 if __name__=="__main__":
     solution()

@@ -4,6 +4,8 @@ class StackMax:
 def push(self, value):
     self.stack.append(value)
 
+
+
 def pop(self):
     if self.stack:
         return self.stack.pop()
@@ -18,7 +20,4 @@ def get_max(self):
 if __name__=="__main__":
     for i in range(int(input())):
         input()
-
-
-
 

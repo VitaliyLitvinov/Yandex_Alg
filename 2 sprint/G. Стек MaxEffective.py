@@ -2,18 +2,21 @@
 class StackMax:
     def __init__(self):
         self.stack: list[int] = []
+        self.mx_stack: list = []
 
     def push(self, item) -> None:
         self.stack.append(int(item))
+        if int(item) >= self.stack[-1]:
+            self.mx_stack.append(int(item))
+
     def pop(self) -> None:
-        self.stack.pop()
+        value = self.stack.pop()
+        if value == self.mx_stack[-1] and self.mx_stack:
+            self.mx_stack.pop()
+
     def get_max(self) -> int|None:
         if self.stack:
-            mx = -99999
-            for i in self.stack:
-                if i > mx:
-                    mx = i
-            return mx
+            return self.mx_stack[-1]
         return None
 
 def Solution() ->None:
@@ -43,6 +46,29 @@ if __name__=='__main__':
 # pop
 # get_max
 # get_max
+
+# 10
+# pop
+# pop
+# push 4
+# push -5
+# push 7
+# pop
+# pop
+# get_max
+# pop
+# get_max
+
+# 6
+# push 2
+# push -2
+# get_max
+# pop
+# get_max
+# pop
+
+
+
 
 
 

@@ -8,7 +8,7 @@ class MyQueueSized:
 
     def push(self, value):
         if self.size == self.max_size:
-            return 'error'
+            print('error')
         else:
             self.queue[self.tail] = value
             self.tail = (self.tail + 1) % self.max_size

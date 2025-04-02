@@ -1,23 +1,34 @@
-class StackMax:
-    def __init(self):
-        self.stack = []
-def push(self, value):
-    self.stack.append(value)
+class MyQueueSized:
+    def __init(self, n):
+        self.head = 0
+        self.tail = 0
+        self.size = 0
+        self.max_size = n
 
+    def push(self, value):
+        if self.size == self.max_size:
+            return 'error'
+        else:
+            self[self.head] = value
+            self.head = (self.head + 1) % self.max_size
+            self.size += 1
 
+    def pop(self):
+        if not is_empty(self):
+            value = self[self.head]
+            self.head = (self.head + 1) % self.max_size
+            self.size -= 1
+            return value
+        else: return None
 
-def pop(self):
-    if self.stack:
-        return self.stack.pop()
-    else:
-        return None
-def get_max(self):
-    maximum = None
-    for i in self.stack:
-        if i > maximum: maximum = i
-    return maximum
+    def peek(self):
+        return self[self.tail]
 
-if __name__=="__main__":
-    for i in range(int(input())):
-        input()
+    def size(self):
+        return self.size
+def is_empty(self):
+    return self.size == 0
 
+def Solution()
+if __name__=='__main__':
+    Solution()

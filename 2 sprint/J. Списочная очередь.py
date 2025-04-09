@@ -9,7 +9,11 @@ class Queue:
         self.head = 0
         self.tail = 0
         self.size: int = 0
-    def put(self):
+
+    def put(self, value):
+        if not self.size:
+            
+        self.size += 1
 
     def get(self):
 
@@ -24,7 +28,7 @@ def solution(n):
         if request.startswith('get'):
             queue.get()
         elif request.startswith('put'):
-            queue.put()
+            queue.put(request.rstrip().split()[-1])
         elif request.startswith("size"):
             queue.size()
 

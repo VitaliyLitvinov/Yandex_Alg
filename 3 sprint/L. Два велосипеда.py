@@ -1,13 +1,13 @@
 import sys
 def binary_search(arr: list[int], x: int, left:int, right: int) -> int:
     mid: int = (left + right) // 2
+    if right <= left:
+        return -1
     if arr[mid] == x:
         while arr[mid] == x:
             if arr[mid - 1] == x:
                 mid -= 1
             else: return mid + 1
-    if right <= left:
-        return -1
     if arr[mid] > x:
         return binary_search(arr, x, left, mid)
     else:

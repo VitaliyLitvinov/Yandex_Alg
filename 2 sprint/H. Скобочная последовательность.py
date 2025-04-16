@@ -33,7 +33,7 @@ if __name__=="__main__":
 #         return True
 #
 # if __name__=="__main__":
-#     print(check(input()))
+#     print(check(input.txt()))
 
 #    {[()]}(()){{(([]))}}
 

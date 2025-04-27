@@ -1,2 +1,6 @@
-list_set = [len(set(input())) for i in range(int(input()))]
-print(*list_set)
+in_file = open('input.txt')
+nums = in_file.readline().rstrip().split()
+out_file = open('output.txt', 'w')
+out_file.write(str(int(nums[0]) + int(nums[1])))
+in_file.close()
+out_file.close()
